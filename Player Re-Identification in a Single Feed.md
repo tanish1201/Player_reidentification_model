@@ -100,8 +100,6 @@ The script will process the `15sec_input_720p.mp4` video and generate an output 
 
 *   `reid_script_corrected_v5.py`: The main Python script containing the latest re-identification logic.
 *   `requirements.txt`: Lists the Python packages required to run the script.
-*   `implementation_guide.pdf`: A detailed document explaining the core concepts and initial implementation steps of player re-identification.
-*   `reid_errors_analysis.pdf`: An in-depth analysis of the persistent errors encountered during the development of the tracking logic, distinguishing between model and algorithm limitations.
 *   `create_dummy_video.py`: A utility script to create a dummy video file for testing purposes (if `15sec_input_720p.mp4` is not available).
 *   `best.pt`: The YOLOv11 object detection model (should be placed here).
 *   `15sec_input_720p.mp4`: The input video file (should be placed here).
@@ -113,8 +111,3 @@ The script will process the `15sec_input_720p.mp4` video and generate an output 
 *   **Occlusion Handling:** More sophisticated strategies for managing partial and full occlusions are needed to prevent ID switches and track fragmentation in crowded scenes.
 *   **Model Refinement:** The provided `best.pt` model occasionally misidentifies non-player objects (like the goal post). Further fine-tuning or training the object detection model on a more diverse and carefully annotated dataset could mitigate this.
 *   **Performance Optimization:** For real-time applications, optimizing the inference speed of the YOLO model (e.g., using TensorRT) and the tracking algorithm would be crucial.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
