@@ -114,7 +114,3 @@ The script will process the `15sec_input_720p.mp4` video and generate an output 
 *   **Model Refinement:** The provided `best.pt` model occasionally misidentifies non-player objects (like the goal post). Further fine-tuning or training the object detection model on a more diverse and carefully annotated dataset could mitigate this.
 *   **Performance Optimization:** For real-time applications, optimizing the inference speed of the YOLO model (e.g., using TensorRT) and the tracking algorithm would be crucial.
 
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
