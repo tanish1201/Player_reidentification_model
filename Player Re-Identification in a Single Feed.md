@@ -22,8 +22,6 @@ Implementing player re-identification involves several fundamental computer visi
 *   **Kalman Filters:** Used for predicting the future state (position and velocity) of tracked objects, helping to smooth trajectories and improve association accuracy.
 *   **Data Association (Hungarian Algorithm):** An optimization algorithm used to find the optimal assignment between predicted track locations and current detections, minimizing a defined cost (e.g., based on IoU).
 
-For a more detailed explanation of these concepts, please refer to the `reid_error_analysis.md` document in this repository.
-
 ## Implementation Details and Evolution
 
 The project's core logic is encapsulated in the Python scripts, which evolved through several iterations to address various challenges in player re-identification:
@@ -55,6 +53,8 @@ The latest iterations (`reid_script_corrected_v3.py` and its subsequent minor fi
 *   Address the `ValueError: cost matrix is infeasible` by ensuring the cost matrix is always valid for the Hungarian algorithm.
 
 **Current Limitations:** Despite these advancements, the system still faces limitations primarily due to the absence of robust, deep learning-based appearance features. The simple average color feature is not discriminative enough for truly reliable re-identification, especially after long occlusions or when players reappear in different parts of the frame. The misidentification of non-player objects (like the goal post) is also an inherent limitation of the provided YOLOv11 model itself.
+
+For a more detailed explanation and error analysis, please refer to the `reid_error_analysis.md` document in this repository.
 
 ## Setup and Installation
 
